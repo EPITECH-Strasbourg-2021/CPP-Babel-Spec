@@ -57,7 +57,7 @@ List of message types:
    - **`10001011`** (**139**) : **`Event::GetMessage`** (response)
 
 **Client-Client**
-   - **`00001100`** (**140**) : **`Event::AudioFrame`** (event)
+   - **`00001100`** (**12**) : **`Event::AudioFrame`** (event)
 
 
 ## Prelude
