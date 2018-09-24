@@ -8,7 +8,8 @@ The protocol is to be used within a single connection.
 The server 
 Le protocole est valide à l’emploi pour une communication client-client ou client-server.
 
-**WARNING: The protocol uses big-endian numbers.**
+**WARNING: The protocol uses big-endian numbers.**  
+**WARNING: Don't forget to use `#pragma pack()` directives on each struct that you intend to directly read into or write from it.**  
 
 ## Message structure
 
@@ -74,6 +75,21 @@ using i32 = int32_t;
 
 #define STD_SIZE (256)
 #define MSG_SIZE (1024)
+
+/*
+** This define is optional.
+** It just allows to pack a struct
+** by annotating it like this:
+** 
+**   PACK(struct Test {
+**       bool status;
+**       u32 id;
+**   });
+*/
+#define PACK(x) \
+    #pragma pack(push, 1)\
+    x;
+    #pragma pack(pop)
 
 enum class Status : u8 {
     Disconnected = 0,
