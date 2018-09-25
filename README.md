@@ -86,10 +86,11 @@ using i32 = int32_t;
 **       u32 id;
 **   });
 */
-#define PACK(x) \
-    #pragma pack(push, 1)\
-    x;
-    #pragma pack(pop)
+#ifdef _MSC_VER
+# define PACK(d) __pragma(pack(push, 1)) d __pragma(pack(pop))
+#else
+# define PACK(d) d __attribute__((packed))
+#endif
 
 enum class Status : u8 {
     Disconnected = 0,
