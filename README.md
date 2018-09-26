@@ -213,8 +213,7 @@ struct GetUsersResponse {
 ### Request
 ```c++
 struct SendMessageRequest {
-    u32 dest_id;
-    char msg[STD_SIZE];
+    Msg msg;
 };
 ```
 ### Response
