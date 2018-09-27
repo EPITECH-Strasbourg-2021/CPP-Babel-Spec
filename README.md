@@ -136,6 +136,9 @@ struct LoginResponse {
 ## Command::Logout
 ### Request
 Zero-sized request.
+```c++
+struct LogoutRequest {};
+```
 ### Response
 ```c++
 struct LogoutResponse {
@@ -170,7 +173,7 @@ struct GetMsgRequest {
 ```c++
 //! Can't be read directly
 // messages.size() == body_size / sizeof(Msg)
-struct MsgResponse {
+struct GetMsgResponse {
     std::vector<Msg> messages;
 };
 ```
