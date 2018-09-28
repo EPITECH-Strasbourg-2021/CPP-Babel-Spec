@@ -243,6 +243,34 @@ struct CallUserResponse {
 };
 ```
 
+## Command::addFriend
+### Request
+```c++
+struct AddFriendRequest {
+    u32 friend_id;
+};
+```
+### Response
+```c++
+struct AddFriendResponse {
+    bool status;
+};
+```
+
+## Command::delFriend
+### Request
+```c++
+struct DelFriendRequest {
+    u32 friend_id;
+};
+```
+### Response
+```c++
+struct DelFriendResponse {
+    bool status;
+};
+```
+
 ## Event::IncomingCall
 ### Event
 ```c++
