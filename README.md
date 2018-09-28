@@ -43,8 +43,12 @@ List of message types:
    - **`10000101`** (**133**) : **`Command::GetUsers`** (response)
    - **`00000110`** (**6**) : **`Command::SendMessage`** (request)
    - **`10000110`** (**134**) : **`Command::SendMessage`** (response)
-   - **`00000111`** (**7**) : **`Command::CallUser`** (request)
+   - **`00000111`** (**7**)   : **`Command::CallUser`** (request)
    - **`10000111`** (**135**) : **`Command::CallUser`** (response)
+   - **`00001101`** (**13**) : **`Command::SetFriend`** (request)
+   - **`10001101`** (**141**) : **`Command::SetFriend`** (response)
+   - **`00001110`** (**14**) : **`Command::DelFriend`** (request)
+   - **`10001110`** (**142**) : **`Command::DelFriend`** (response)
 
 **Server-Client**
    - **`00001000`** (**8**) : **`Event::IncomingCall`** (event)
@@ -243,7 +247,7 @@ struct CallUserResponse {
 };
 ```
 
-## Command::addFriend
+## Command::AddFriend
 ### Request
 ```c++
 struct AddFriendRequest {
@@ -257,7 +261,7 @@ struct AddFriendResponse {
 };
 ```
 
-## Command::delFriend
+## Command::DelFriend
 ### Request
 ```c++
 struct DelFriendRequest {
