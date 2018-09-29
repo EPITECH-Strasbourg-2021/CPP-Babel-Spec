@@ -104,6 +104,42 @@ enum class Status : u8 {
     Hidden
 };
 
+enum Request {
+	Ping = 0,
+	Login,	
+	Logout,
+	Register,
+	GetMessages,
+	GetUsers,
+	SendMessage,
+	CallUser,
+	IncomingCall,
+	CallStatus,
+	StatusUpdate,
+	GetMessage,
+	AudioFrame,
+	SetFriend,
+	DelFriend
+};
+
+enum Response {
+	Pong = 128,
+	Login,	
+	Logout,
+	Register,
+	GetMessages,
+	GetUsers,
+	SendMessage,
+	CallUser,
+        IncomingCall,
+        CallStatus,
+        StatusUpdate,
+        GetMessage,
+        AudioFrame,
+        SetFriend,
+        DelFriend
+};
+
 struct Msg {
     u32 sender;
     char msg[STD_SIZE];
