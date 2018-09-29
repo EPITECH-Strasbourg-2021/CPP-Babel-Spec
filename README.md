@@ -45,8 +45,8 @@ List of message types:
    - **`10000110`** (**134**) : **`Command::SendMessage`** (response)
    - **`00000111`** (**7**)   : **`Command::CallUser`** (request)
    - **`10000111`** (**135**) : **`Command::CallUser`** (response)
-   - **`00001101`** (**13**) : **`Command::SetFriend`** (request)
-   - **`10001101`** (**141**) : **`Command::SetFriend`** (response)
+   - **`00001101`** (**13**) : **`Command::AddFriend`** (request)
+   - **`10001101`** (**141**) : **`Command::AddFriend`** (response)
    - **`00001110`** (**14**) : **`Command::DelFriend`** (request)
    - **`10001110`** (**142**) : **`Command::DelFriend`** (response)
 
@@ -118,7 +118,7 @@ enum class Request : u8 {
     StatusUpdate,
     GetMessage,
     AudioFrame,
-    SetFriend,
+    AddFriend,
     DelFriend
 };
 
@@ -136,7 +136,7 @@ enum class Response : u8 {
     StatusUpdate,
     GetMessage,
     AudioFrame,
-    SetFriend,
+    AddFriend,
     DelFriend
 };
     
