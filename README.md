@@ -104,7 +104,7 @@ enum class Status : u8 {
     Hidden
 };
 
-enum Request {
+enum class Request : u8 {
     Ping = 0,
     Login,	
     Logout,
@@ -122,7 +122,7 @@ enum Request {
     DelFriend
 };
 
-enum Response {
+enum class Response : u8 {
     Pong = 128,
     Login,	
     Logout,
