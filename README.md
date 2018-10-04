@@ -1,12 +1,11 @@
 # Babel Protocol: C++ Module (Strasbourg 2018)
 
-Ceci est la spécification du protocole Babel (Module C++, 2018).
-
-This specification defines the protocol used in the Babel project.
+This specification defines the protocol used in the Babel project as part of the EPITECH 2018 C++ module.  
 
 The protocol is to be used within a single connection.  
-The server 
-Le protocole est valide à l’emploi pour une communication client-client ou client-server.
+
+The protocol is used for both client-server and client-client communication.  
+This is transport-layer agnostic (TCP, UDP or whatever).  
 
 **WARNING: The protocol uses big-endian numbers.**  
 **WARNING: Don't forget to use `#pragma pack()` directives on each struct that you intend to directly read into or write from it.**  
