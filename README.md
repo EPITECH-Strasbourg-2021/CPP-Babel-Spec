@@ -52,8 +52,6 @@ List of message types:
 **Server-Client**
    - **`00001000`** (**8**) : **`Event::IncomingCall`** (event)
    - **`10001000`** (**136**) : **`Event::IncomingCall`** (response)
-   - **`00001001`** (**9**) : **`Event::CallStatus`** (event)
-   - **`10001001`** (**137**) : **`Event::CallStatus`** (response)
    - **`00001010`** (**10**) : **`Event::StatusUpdate`** (event)
    - **`10001010`** (**138**) : **`Event::StatusUpdate`** (response)
    - **`00001011`** (**11**) : **`Event::GetMessage`** (event)
@@ -113,8 +111,7 @@ enum class Request : u8 {
     SendMessage,
     CallUser,
     IncomingCall,
-    CallStatus,
-    StatusUpdate,
+    StatusUpdate = 10,
     GetMessage,
     AudioFrame,
     AddFriend,
@@ -131,8 +128,7 @@ enum class Response : u8 {
     SendMessage,
     CallUser,
     IncomingCall,
-    CallStatus,
-    StatusUpdate,
+    StatusUpdate = 138,
     GetMessage,
     AudioFrame,
     AddFriend,
