@@ -371,10 +371,15 @@ struct StatusUpdateResponse {
 ### Event
 ```c++
 //! This can't be read directly
-struct AudioPacket {
+struct AudioFrameRequest {
     u32 size;
-    u32 timestamp;
     std::vector<unsigned char> packet;
 };
 ```
 
+```c++
+struct HeaderAudioPacket {
+   u32 size;
+   u32 timestamp;
+}
+```
