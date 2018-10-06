@@ -265,23 +265,6 @@ struct SendMessageResponse {
 };
 ```
 
-## Command::CallUser
-### Request
-```c++
-struct CallUserRequest {
-    u32 dest_id;
-    u16 port;
-    u32 sampleRate;
-    u32 frameSize;
-};
-```
-### Response
-```c++
-struct CallUserResponse {
-    bool status;
-};
-```
-
 ## Command::AddFriend
 ### Request
 ```c++
@@ -310,6 +293,25 @@ struct DelFriendResponse {
 };
 ```
 
+## Command::CallUser
+### Request
+```c++
+struct CallUserRequest {
+    u32 dest_id;
+    u16 port;
+    u32 sampleRate;
+    u32 frameSize;
+};
+```
+### Response
+```c++
+struct CallUserResponse {
+    bool accepted;
+    u8 ip[4];
+    u16 port;
+};
+```
+
 ## Event::IncomingCall
 ### Event
 ```c++
@@ -322,7 +324,7 @@ struct IncomingCallRequest {
 ### Response
 ```c++
 struct IncomingCallResponse {
-    bool status;
+    bool accepted;
 };
 ```
 
@@ -340,19 +342,6 @@ struct GetMessageResponse {
 };
 ```
 
-## Event::CallStatus
-### Event
-```c++
-struct CallStatusRequest {
-    bool accepted;
-};
-```
-### Response
-```c++
-struct CallStatusResponse {
-    bool accepted;
-};
-```
 ## Event::StatusUpdate
 ### Event
 ```c++
