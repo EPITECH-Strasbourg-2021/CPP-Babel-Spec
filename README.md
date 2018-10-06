@@ -372,8 +372,14 @@ struct StatusUpdateResponse {
 ```c++
 //! This can't be read directly
 struct AudioFrameRequest {
-    u32 size;
+    HeaderAudioPacket header;
     std::vector<unsigned char> packet;
 };
 ```
 
+```c++
+struct HeaderAudioPacket {
+   u32 size;
+   u32 timestamp;
+}
+```
