@@ -59,9 +59,9 @@ List of message types:
    - **`00001111`** (**15**) : **`Event::NewUser`** (event)
    - **`10001111`** (**143**) : **`Event::NewUser`** (response)
    - **`00010000`** (**16**) : **`Event::AddFriend`** (event)
-   - **`10010000`** (**145**) : **`Event::AddFriend`** (response)
+   - **`10010000`** (**144**) : **`Event::AddFriend`** (response)
    - **`00010001`** (**17**) : **`Event::DelFriend`** (event)
-   - **`10010001`** (**146**) : **`Event::DelFriend`** (response)
+   - **`10010001`** (**145**) : **`Event::DelFriend`** (response)
 
 **Client-Client**
    - **`00001100`** (**12**) : **`Event::AudioFrame`** (event)
