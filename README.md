@@ -352,6 +352,20 @@ struct StatusUpdateResponse {
     bool accepted;
 };
 ```
+
+## Event::NewUser
+### Event
+```c++
+struct NewUserRequest {
+   User user;
+};
+```
+### Response
+```c++
+struct NewUserResponse {
+};
+```
+
 ## Event::AudioFrame
 ### Event
 ```c++
