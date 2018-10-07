@@ -349,6 +349,20 @@ struct StatusUpdateRequest {
 struct StatusUpdateResponse {
 };
 ```
+
+## Event::NewUser
+### Event
+```c++
+struct NewUserRequest {
+   User user;
+};
+```
+### Response
+```c++
+struct NewUserResponse {
+};
+```
+
 ## Event::AudioFrame
 ### Event
 ```c++
