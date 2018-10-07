@@ -56,6 +56,8 @@ List of message types:
    - **`10001010`** (**138**) : **`Event::StatusUpdate`** (response)
    - **`00001011`** (**11**) : **`Event::GetMessage`** (event)
    - **`10001011`** (**139**) : **`Event::GetMessage`** (response)
+   - **`00001111`** (**15**) : **`Event::NewUser`** (event)
+   - **`10001111`** (**143**) : **`Event::NewUser`** (response)
 
 **Client-Client**
    - **`00001100`** (**12**) : **`Event::AudioFrame`** (event)
