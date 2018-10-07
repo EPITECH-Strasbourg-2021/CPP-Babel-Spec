@@ -257,7 +257,7 @@ struct SendMessageRequest {
 ### Response
 ```c++
 struct SendMessageResponse {
-    bool status;
+    bool success;
 };
 ```
 
@@ -285,7 +285,6 @@ struct DelFriendRequest {
 ### Response
 ```c++
 struct DelFriendResponse {
-    bool status;
 };
 ```
 
@@ -334,7 +333,6 @@ struct GetMessageRequest {
 ### Response
 ```c++
 struct GetMessageResponse {
-    bool status;
 };
 ```
 
@@ -349,7 +347,6 @@ struct StatusUpdateRequest {
 ### Response
 ```c++
 struct StatusUpdateResponse {
-    bool accepted;
 };
 ```
 ## Event::AudioFrame
